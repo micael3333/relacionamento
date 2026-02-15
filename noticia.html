@@ -4,31 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Quando o amor existe, mas não “chega”: o que as 5 Linguagens do Amor explicam</title>
-  <meta name="description" content="Matéria especial: por que casais brigam por ruído (não por falta de amor), como as 5 linguagens do amor reduzem a incerteza e um teste rápido para descobrir seu idioma afetivo." />
+  <meta name="description" content="Entenda por que casais brigam por ruído (não por falta de amor) e como as 5 linguagens do amor ajudam a reduzir a incerteza e melhorar a comunicação." />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Quando o amor existe, mas não “chega”: o que as 5 Linguagens do Amor explicam" />
-  <meta property="og:description" content="Uma matéria com história + explicação + checklist. No fim, um teste rápido no app." />
+  <meta property="og:description" content="Matéria especial: história + explicação + checklist + serviço." />
   <meta property="og:locale" content="pt_BR" />
 
   <style>
     :root{
-      /* Paleta “portal” (troque aqui) */
-      --brand:#8b0b0b;      /* barra principal */
-      --brand2:#b81c1c;     /* hover/realce */
+      --brand:#8b0b0b;
+      --brand2:#b81c1c;
       --bg:#f6f7f9;
       --paper:#ffffff;
       --text:#1b1f2a;
       --muted:#5f6676;
       --line:#e7e9ef;
       --chip:#f0f2f6;
-      --ok:#146c43;
-      --warn:#8a4b0f;
       --shadow: 0 10px 30px rgba(16, 24, 40, .08);
     }
 
     *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
@@ -37,6 +34,8 @@
       line-height: 1.6;
     }
     a{ color: inherit; text-decoration: none; }
+
+    /* TOPBAR */
     .topbar{
       background: var(--brand);
       color:#fff;
@@ -48,15 +47,22 @@
     .topbar-inner{
       max-width: 1100px;
       margin: 0 auto;
-      padding: 12px 16px;
+      padding: 10px 14px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px;
+      gap:12px;
+    }
+    .brand-left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width: 0;
     }
     .logo{
       display:flex; align-items:center; gap:10px;
       font-weight:900; letter-spacing:.2px;
+      min-width:0;
     }
     .logo .mark{
       width:34px; height:34px;
@@ -64,8 +70,18 @@
       display:inline-flex; align-items:center; justify-content:center;
       background: rgba(255,255,255,.16);
       border: 1px solid rgba(255,255,255,.18);
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: lowercase;
+      flex: 0 0 auto;
     }
+    .logo .name{
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width: 240px;
+    }
+
     .navlinks{
       display:flex; align-items:center; gap:10px;
       font-size:13px;
@@ -87,15 +103,65 @@
       background: rgba(255,255,255,.12);
       border:1px solid rgba(255,255,255,.18);
       opacity:.9;
+      white-space:nowrap;
+    }
+    .burger{
+      display:none;
+      width:38px;height:38px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.12);
+      color:#fff;
+      align-items:center;
+      justify-content:center;
+      font-size:18px;
+      flex:0 0 auto;
     }
 
-    .wrap{ max-width: 1100px; margin: 0 auto; padding: 18px 16px 110px; }
+    /* MOBILE HEADER FIX */
+    @media(max-width: 720px){
+      .topbar-inner{
+        flex-direction: column;
+        align-items: stretch;
+        gap:10px;
+      }
+      .brand-row{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+      }
+      .burger{ display:flex; }
+      .logo .name{ max-width: 60vw; }
+      .navlinks{
+        justify-content:flex-start;
+        gap:8px;
+      }
+      /* reduz poluição visual no mobile */
+      .navlinks .chip{ padding:6px 8px; font-size:12px; }
+    }
+    @media(max-width: 520px){
+      .navlinks .chip{ display:none; } /* no celular fica só busca */
+      .searchfake{ width:100%; justify-content:center; }
+    }
+
+    /* LAYOUT */
+    .wrap{ max-width: 1100px; margin: 0 auto; padding: 16px 14px 32px; }
     .crumbs{
       display:flex; flex-wrap:wrap; gap:8px; align-items:center;
       font-size:12px; color: var(--muted);
       margin: 10px 0 12px;
     }
     .crumbs a{ color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+    .divider{ color: #c2c7d4; }
+
+    .hero{
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
     .section{
       display:inline-flex; align-items:center; gap:8px;
       background: var(--chip);
@@ -106,16 +172,9 @@
       color: #2b3140;
       width: fit-content;
     }
-    .hero{
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: var(--shadow);
-    }
     h1{
       margin: 10px 0 10px;
-      font-size: clamp(26px, 3vw, 40px);
+      font-size: clamp(24px, 4.2vw, 40px);
       line-height: 1.1;
       letter-spacing: -.3px;
     }
@@ -123,7 +182,7 @@
       margin: 0 0 12px;
       color: var(--muted);
       font-size: 16px;
-      max-width: 80ch;
+      max-width: 85ch;
     }
     .meta{
       display:flex;
@@ -134,11 +193,32 @@
       font-size: 13px;
     }
     .meta b{ color: #2b3140; }
-    .divider{ color: #c2c7d4; }
+
+    details{
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+      margin-top: 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 800;
+      color: #2b3140;
+    }
+    .note{
+      font-size: 12.5px;
+      color: var(--muted);
+      background: #f7f8fb;
+      border: 1px dashed #dfe3ef;
+      padding: 10px 12px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
 
     .grid{
       display:grid;
-      grid-template-columns: 1.3fr .7fr;
+      grid-template-columns: 1.35fr .65fr;
       gap: 16px;
       align-items:start;
       margin-top: 16px;
@@ -154,6 +234,7 @@
       padding: 16px;
       box-shadow: var(--shadow);
     }
+
     .article p, .article li{
       color: #2b3140;
       font-size: 15.5px;
@@ -170,25 +251,17 @@
       border: 1px solid var(--line);
       display:block;
       background: #eef1f6;
+      object-fit: cover;
+      max-height: 420px;
+    }
+    @media(max-width: 520px){
+      figure img{ max-height: 280px; }
     }
     figcaption{
       margin-top: 8px;
       font-size: 12px;
       color: var(--muted);
     }
-
-    .share{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px;
-    }
-    .share a{
-      font-size: 12px;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: #2b3140;
-    }
-    .share a:hover{ border-color: #d6d9e4; }
 
     .callout{
       border-left: 4px solid var(--brand2);
@@ -199,48 +272,6 @@
       margin: 14px 0;
     }
     .callout b{ color: #7a0c0c; }
-    .note{
-      font-size: 12.5px;
-      color: var(--muted);
-      background: #f7f8fb;
-      border: 1px dashed #dfe3ef;
-      padding: 10px 12px;
-      border-radius: 12px;
-      margin-top: 12px;
-    }
-    details{
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px 12px;
-      background: #fff;
-      margin-top: 14px;
-    }
-    summary{
-      cursor:pointer;
-      font-weight: 800;
-      color: #2b3140;
-    }
-
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top: 10px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.08);
-      background: var(--brand);
-      color: #fff;
-      font-weight: 900;
-    }
-    .btn:hover{ background: var(--brand2); }
-    .btn2{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: #2b3140;
-      font-weight: 800;
-    }
 
     .box{
       border: 1px solid var(--line);
@@ -250,6 +281,7 @@
       background: #fff;
     }
     .box h4{ margin: 0 0 8px; font-size: 14px; }
+
     .tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 8px; }
     .tag{
       font-size: 12px;
@@ -265,7 +297,10 @@
       display:grid;
       gap: 10px;
     }
-    .barrow{ display:grid; grid-template-columns: 1fr 90px; gap:10px; align-items:center; }
+    .barrow{ display:grid; grid-template-columns: 1fr 64px; gap:10px; align-items:center; }
+    @media(max-width: 520px){
+      .barrow{ grid-template-columns: 1fr 48px; }
+    }
     .barlabel{ font-size: 13px; color: #2b3140; }
     .bar{
       height: 10px;
@@ -282,40 +317,66 @@
     }
     .pct{ font-size: 12px; color: var(--muted); text-align:right; }
 
-    .sticky{
-      position: fixed;
-      left:0; right:0; bottom:0;
-      background: rgba(255,255,255,.92);
-      border-top: 1px solid var(--line);
-      backdrop-filter: blur(10px);
-      padding: 10px 12px;
-      display:flex;
-      justify-content:center;
-      z-index: 60;
+    .share{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px;
     }
-    .sticky .btn{ width:min(560px, 100%); }
+    .share a{
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #2b3140;
+    }
 
     .footer{
       margin-top: 18px;
       font-size: 12px;
       color: var(--muted);
     }
+
+    /* "Serviço" link estilo portal (discreto, sem cara de anúncio) */
+    .service{
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fbfbfd;
+    }
+    .service .kicker{
+      display:inline-block;
+      font-size: 12px;
+      font-weight: 900;
+      color: #2b3140;
+      background: var(--chip);
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .service a{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: #2b3140;
+      font-weight: 800;
+    }
   </style>
 </head>
 
-<body>
-  <!-- Topbar "portal-like" -->
+<body id="top">
   <div class="topbar">
     <div class="topbar-inner">
-      <div class="logo">
-        <span class="mark">📰</span>
-        <span>Portal Relacionamentos</span>
-        <span class="navlinks">
-          <span class="chip">ESPECIAL</span>
-        </span>
+      <div class="brand-row">
+        <div class="brand-left">
+          <div class="logo">
+            <span class="mark">g2</span>
+            <span class="name">Portal Relacionamentos</span>
+          </div>
+          <span class="navlinks"><span class="chip">ESPECIAL</span></span>
+        </div>
+        <div class="burger" aria-label="Menu">☰</div>
       </div>
 
-      <div class="navlinks">
+      <div class="navlinks" aria-label="Navegação">
         <span class="chip">Saúde emocional</span>
         <span class="chip">Casais</span>
         <span class="chip">Bem-estar</span>
@@ -360,7 +421,7 @@
           <li>O conflito mais comum não é “falta de amor”, é <b>tradução errada</b>.</li>
           <li>As 5 linguagens organizam sinais e reduzem o modo “leitura de mente”.</li>
           <li>Quando você pede no idioma errado, vira cobrança sem querer.</li>
-          <li>No fim, um teste rápido ajuda a descobrir seu padrão afetivo.</li>
+          <li>Existe um jeito simples de testar e conversar com menos ruído.</li>
         </ul>
       </details>
 
@@ -371,11 +432,10 @@
     </div>
 
     <section class="grid">
-      <!-- ARTICLE -->
       <article class="article">
         <figure>
-          <!-- Troque o src por uma imagem sua (ou do banco que você usa) -->
-          <img src="hero-love-language.jpg" alt="Silhueta de casal ao pôr do sol" />
+          <!-- IMAGEM DO CASAL (coloque o arquivo em /public/img/hero-love-language.png) -->
+          <img src="/img/hero-love-language.png" alt="Silhueta de casal ao pôr do sol" />
           <figcaption>Imagem ilustrativa — relacionamentos costumam falhar mais por “ruído” do que por falta de sentimento.</figcaption>
         </figure>
 
@@ -407,34 +467,25 @@
           <li><b>Toque físico:</b> abraço, carinho, proximidade corporal.</li>
         </ul>
 
-        <h2>Por que isso dá sensação de “salvação” (sem promessa enganosa)</h2>
+        <h2>O que especialistas costumam recomendar (e por quê)</h2>
         <p>
-          Porque tira o relacionamento do modo “adivinhação” e coloca no modo “ação”. A pessoa deixa de interpretar tudo como rejeição e passa a ter
-          um jeito simples de pedir: <b>“quando você faz X, eu sinto Y.”</b> Isso cria alívio e devolve agência.
+          Profissionais que trabalham com comunicação no casal costumam indicar exercícios simples de “tradução”:
+          tirar a conversa do campo do “eu acho” e levar para o campo do <b>observável</b> (o que eu faço, o que você sente).
+          Isso tende a reduzir a incerteza e diminuir o ciclo “acusação → defesa”.
         </p>
 
-        <h3>O erro nº 1: “eu demonstro do meu jeito, então você tem que sentir”</h3>
-        <p>
-          O cérebro confunde <b>intenção</b> com <b>impacto</b>. Você pode amar muito — mas no idioma errado. Aí surgem as frases que inflamam:
-          “você nunca…” / “você sempre…”. Acusação vira defesa; pedido vira cooperação.
-        </p>
-
-        <!-- CTA discreto (meio do texto) -->
         <div class="box">
-          <h4>Quer descobrir seu idioma afetivo em 1 minuto?</h4>
-          <p style="margin:0;color:var(--muted);font-size:13px">
-            Um teste rápido ajuda a nomear seu padrão (dominante + secundário) e dá sugestões práticas de como pedir sem virar cobrança.
-          </p>
-          <div class="btnrow">
-            <a class="btn cta" href="/go?feature=love_language">Fazer o teste no app →</a>
-            <a class="btn2 cta" href="/linguagem-do-amor/teste">Ver a página do teste →</a>
-          </div>
+          <h4>3 princípios que costumam ajudar</h4>
+          <ul style="margin:8px 0 0 18px;color:#2b3140;font-size:14px;line-height:1.7">
+            <li><b>Intenção ≠ impacto:</b> amar não garante que o outro “sinta”.</li>
+            <li><b>Pedido específico:</b> “quando você faz X, eu sinto Y”.</li>
+            <li><b>Microtestes:</b> 1 gesto por dia (evita DR gigante).</li>
+          </ul>
         </div>
 
         <h2>Dados (ilustrativos): o que mais impacta a satisfação no relacionamento</h2>
         <p>
-          Portais costumam usar gráficos para dar clareza visual. Abaixo é um <b>modelo</b> (números ilustrativos) para você trocar por dados reais
-          quando tiver fonte (pesquisa/relatório/enquete).
+          Portais costumam usar gráficos para dar clareza visual. Abaixo é um <b>modelo</b> para você trocar por dados reais quando tiver fonte.
         </p>
 
         <div class="chart" aria-label="Gráfico de barras">
@@ -445,7 +496,6 @@
             </div>
             <div class="pct">72%</div>
           </div>
-
           <div class="barrow">
             <div>
               <div class="barlabel">Demonstrações de carinho (idioma certo)</div>
@@ -453,7 +503,6 @@
             </div>
             <div class="pct">64%</div>
           </div>
-
           <div class="barrow">
             <div>
               <div class="barlabel">Confiança e consistência</div>
@@ -461,7 +510,6 @@
             </div>
             <div class="pct">58%</div>
           </div>
-
           <div class="barrow">
             <div>
               <div class="barlabel">Tempo de qualidade (presença real)</div>
@@ -472,8 +520,7 @@
         </div>
 
         <div class="note">
-          Importante: substitua por fonte real (pesquisa/relatório) se for publicar como “dados”.
-          Se for só pré-lander, mantenha como “ilustrativo” para não prometer autoridade falsa.
+          Importante: substitua por fonte real se for publicar como “dados”. Se for pré-lander, mantenha como modelo/ilustrativo.
         </div>
 
         <h2>Checklist: como usar sem virar “cobrança disfarçada”</h2>
@@ -484,79 +531,76 @@
           <li><b>Tenha um limite:</b> idioma não conserta desrespeito (isso é outro assunto).</li>
         </ul>
 
-        <h2>Onde o app entra (a ponte perfeita)</h2>
+        <div class="callout" style="background:#fffaf0;border-color:#f3e4c7">
+          <b style="color:#8a4b0f">Atenção:</b> linguagem do amor não conserta desrespeito.
+          Se existe humilhação, controle, ameaça, chantagem ou medo constante, o tema é <b>segurança</b>.
+        </div>
+
+        <h2>Onde entra uma “ferramenta” (sem cara de anúncio)</h2>
         <p>
-          Se a dor é “eu não sei pedir sem parecer carente” ou “eu faço tudo e nunca basta”, o teste entra como <b>redução de incerteza</b>:
-          ele dá nome ao padrão e entrega uma forma prática de conversar. É um atalho: menos ruído, mais clareza.
+          Um jeito comum de começar (sem “consertar tudo” de uma vez) é descobrir seu padrão dominante e testar 1 mudança pequena por dia.
+          Ferramentas rápidas de autoavaliação ajudam porque dão nome ao que estava confuso — e deixam a conversa mais objetiva.
         </p>
 
-        <div class="btnrow">
-          <a class="btn cta" href="/go?feature=love_language">Fazer o teste (1 min) →</a>
-          <a class="btn2 cta" href="/go?feature=love_language&mode=couple">Modo casal/grupo →</a>
+        <!-- SERVIÇO (discreto, estilo portal) -->
+        <div class="service">
+          <span class="kicker">SERVIÇO</span>
+          <p style="margin:10px 0 0;color:#2b3140">
+            Ferramenta rápida: <a class="cta" href="/go?feature=love_language">teste de linguagem do amor (autoavaliação)</a>.
+            Use como ponto de partida para conversar com menos ruído.
+          </p>
+          <p style="margin:8px 0 0;color:var(--muted);font-size:12.5px">
+            Nota: conteúdo informativo/entretenimento. Não substitui terapia ou orientação profissional.
+          </p>
         </div>
 
         <div class="footer">
-          Nota editorial: este conteúdo é “especial informativo” (pré-lander). Evita promessas absolutas e não substitui apoio profissional.
+          Nota editorial: este conteúdo é “especial informativo”. Evita promessas absolutas e não substitui apoio profissional.
         </div>
       </article>
 
-      <!-- SIDEBAR -->
       <aside class="side">
-        <h3 style="margin:0 0 8px">Por que isso converte</h3>
+        <h3 style="margin:0 0 8px">Entenda o tema</h3>
         <p style="margin:0;color:var(--muted);font-size:13px">
-          Dor + esperança + proteção. A pessoa não compra “teoria”; compra <b>alívio</b> e um caminho claro.
+          O objetivo aqui é reduzir ruído: transformar “eu acho” em um pedido observável e testável.
         </p>
 
         <div class="box">
-          <h4>O que você sente (e não fala)</h4>
+          <h4>Sinais comuns de “ruído afetivo”</h4>
           <div class="tags">
-            <span class="tag">“tô pedindo demais?”</span>
-            <span class="tag">“tô invisível”</span>
-            <span class="tag">“tenho medo de perder”</span>
-            <span class="tag">“não quero parecer trouxa”</span>
+            <span class="tag">“eu não me sinto visto(a)”</span>
+            <span class="tag">“eu faço tudo e não basta”</span>
+            <span class="tag">“virou cobrança”</span>
+            <span class="tag">“a gente se perde na DR”</span>
           </div>
         </div>
 
         <div class="box">
-          <h4>O que você quer sentir</h4>
+          <h4>Glossário rápido</h4>
           <ul style="margin:8px 0 0 18px;color:#2b3140;font-size:14px;line-height:1.7">
-            <li><b>Clareza</b> (sem adivinhar)</li>
-            <li><b>Segurança</b> (sem paranoia)</li>
-            <li><b>Esperança</b> (sem promessa falsa)</li>
+            <li><b>Ruído:</b> gesto existe, mas não é percebido como amor.</li>
+            <li><b>Idioma:</b> forma que seu cérebro registra carinho.</li>
+            <li><b>Microteste:</b> ação pequena repetida (menos atrito).</li>
           </ul>
         </div>
 
-        <div class="box">
-          <h4>CTA editorial (discreto)</h4>
-          <p style="margin:0;color:var(--muted);font-size:13px">
-            Faça o teste e receba seu “idioma afetivo” + dicas práticas de conversa.
-          </p>
-          <div class="btnrow">
-            <a class="btn cta" href="/go?feature=love_language">Fazer o teste →</a>
-            <a class="btn2" href="#top">Voltar ao topo</a>
-          </div>
+        <div class="note">
+          Se você quiser “mais portal ainda”: posso adicionar bloco “Leia também” + “Tópicos relacionados” no rodapé.
         </div>
 
-        <div class="note">
-          Dica: este layout “portal” aumenta confiança porque parece informação, não propaganda.
-          O CTA entra como “ferramenta prática”.
-        </div>
+        <p style="margin-top:14px;font-size:12px;color:var(--muted)">
+          <a href="#top" style="text-decoration:underline;text-underline-offset:3px">Voltar ao topo</a>
+        </p>
       </aside>
     </section>
   </main>
 
-  <!-- Sticky CTA (opcional; remova se quiser “mais editorial” ainda) -->
-  <div class="sticky">
-    <a class="btn cta" href="/go?feature=love_language">Fazer o teste (1 min) →</a>
-  </div>
-
-  <!-- Preserva UTMs nos CTAs -->
+  <!-- Preserva UTMs nos links (inclusive no SERVIÇO) -->
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
       if (!params.toString()) return;
 
-      // Defaults se quiser padronizar tracking
       if (!params.get('utm_source')) params.set('utm_source', 'prelander');
       if (!params.get('utm_medium')) params.set('utm_medium', 'article');
       if (!params.get('utm_campaign')) params.set('utm_campaign', 'love_language');
