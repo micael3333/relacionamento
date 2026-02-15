@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Uma reportagem leve e informativa sobre as 5 Linguagens do Amor: por que casais brigam por ruído (não por falta de amor) e como traduzir intenção em gesto — com um teste rápido no Misticário." />
+  <title>5 Linguagens do Amor: quando o amor existe, mas parece que não chega</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="5 Linguagens do Amor: quando o amor existe, mas parece que não chega" />
+  <meta property="og:description" content="Uma reportagem leve: por que o carinho some 'na tradução' e como entender seu idioma afetivo em 1 minuto." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --panel:#12121a;
+      --text:#f4f4f6;
+      --muted:#b7b7c2;
+      --border:rgba(255,255,255,.10);
+      --accent1:rgba(185,153,255,.30);
+      --accent2:rgba(124,207,255,.22);
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background: radial-gradient(900px 600px at 10% 10%, var(--accent1), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, var(--accent2), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 18px;
+      border-bottom:1px solid var(--border);
+      background: rgba(18,18,26,.72);
+      backdrop-filter: blur(12px);
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px}
+    .pill{font-size:12px;color:var(--muted);padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(0,0,0,.14)}
+    .wrap{max-width:980px;margin:0 auto;padding:22px 18px 90px}
+    .hero{padding:10px 0 6px}
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(28px,3.2vw,44px);
+      line-height:1.06;
+      letter-spacing:-.5px;
+    }
+    .sub{max-width:75ch;color:var(--muted);margin:0 0 18px;font-size:16px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px;margin:12px 0 0}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:start}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background: rgba(18,18,26,.72);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p, .card li{color:var(--muted);margin:0}
+    .card ul{margin:10px 0 0 18px}
+    .article{
+      background: rgba(18,18,26,.55);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .article h2{margin:18px 0 8px;font-size:20px}
+    .article h3{margin:14px 0 6px;font-size:16px}
+    .article p, .article li{color:var(--muted);font-size:15px;line-height:1.75}
+    .article ul{margin:8px 0 8px 18px}
+    .note{
+      font-size:12px;color:var(--muted);
+      padding:10px 12px;border:1px dashed var(--border);
+      border-radius:12px;background:rgba(0,0,0,.18);
+      margin-top:12px;
+    }
+    .btnrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background: linear-gradient(90deg, rgba(185,153,255,.26), rgba(124,207,255,.18));
+      font-weight:900;
+    }
+    .btn:hover{border-color:rgba(255,255,255,.24);transform:translateY(-1px);transition:.12s ease}
+    .btn2{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:10px 12px;border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+    }
+    hr{border:0;border-top:1px solid var(--border);margin:18px 0}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    @media (max-width: 560px){ .kpis{grid-template-columns:1fr} }
+    .kpi{padding:12px;border:1px solid var(--border);border-radius:14px;background:rgba(0,0,0,.18)}
+    .kpi b{display:block;font-size:14px}
+    .kpi span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+    .sticky{
+      position:fixed;left:0;right:0;bottom:0;z-index:60;
+      padding:12px;
+      border-top:1px solid var(--border);
+      background: rgba(11,11,16,.78);
+      backdrop-filter: blur(12px);
+      display:flex;justify-content:center;
+    }
+    .footer{margin-top:20px;color:var(--muted);font-size:12px}
+    .byline{font-weight:700;color:var(--text)}
+    .tag{display:inline-flex;gap:8px;align-items:center}
+    .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.18);display:inline-block}
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="brand">
+      <span aria-hidden="true">✨</span>
+      <span>Misticário</span>
+      <span class="pill">reportagem + ritual leve</span>
+    </div>
+    <a class="btn2 cta" href="/go?feature=love_language">Fazer o teste</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>5 Linguagens do Amor: quando o amor existe, mas parece que não chega</h1>
+      <p class="sub">
+        Uma história comum: duas pessoas se gostam — mas vivem em mal-entendidos. Nem sempre é “falta de amor”.
+        Às vezes é <b>falta de tradução</b>. Nesta reportagem, explicamos o que são as 5 linguagens do amor,
+        por que elas reduzem ruído emocional e como usar isso sem virar cobrança.
+      </p>
+      <div class="btnrow">
+        <a class="btn cta" href="/go?feature=love_language">Fazer o teste no app (1 min) →</a>
+        <a class="btn2" href="#checklist">Ver checklist rápido</a>
+      </div>
+
+      <div class="meta">
+        <span class="tag"><span class="dot"></span><span class="byline">Portal Misticário</span></span>
+        <span>•</span>
+        <span>Atualizado hoje</span>
+        <span>•</span>
+        <span>Leitura: 4–6 min</span>
+      </div>
+
+      <div class="note">
+        Transparência editorial: a história abaixo é <b>ficcional</b> (inspirada em padrões comuns de relacionamentos).
+        O conteúdo é informativo e de entretenimento — não substitui terapia, diagnóstico ou aconselhamento profissional.
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:16px">
+      <!-- ARTICLE -->
+      <article class="article">
+        <h2>A história: “Ele me ama… mas eu me sinto sozinha do lado dele”</h2>
+        <p>
+          Marina (29) descreve o relacionamento como “bom no papel”: ele é presente, não falta quando ela precisa, resolve
+          coisas práticas. Ainda assim, Marina vive com uma sensação difícil de explicar: <i>“eu sinto que eu não chego nele”</i>.
+          O conflito aparece em detalhes: ela queria ouvir “tô orgulhoso de você”; ele achava que levar o carro na revisão
+          era prova de amor.
+        </p>
+        <p>
+          Do lado dele, o sentimento era outro: <i>“Eu faço tudo. Por que nunca é suficiente?”</i>. Isso cria o ciclo clássico:
+          um pede por palavras, o outro entrega serviço; um interpreta silêncio como desamor, o outro interpreta pedido como cobrança.
+          O amor existe — mas o cérebro registra “não chegou”.
+        </p>
+
+        <h2>O ponto chave: amor não é leitura de mente — é comunicação + registro emocional</h2>
+        <p>
+          A ideia das <b>5 linguagens do amor</b> ajuda porque dá um mapa simples para algo que é confuso:
+          <b>como cada pessoa reconhece carinho</b>. O objetivo não é encaixotar ninguém — é reduzir a incerteza e organizar sinais.
+        </p>
+
+        <h2>Quais são as 5 linguagens do amor (em português claro)</h2>
+        <ul>
+          <li><b>Palavras de afirmação:</b> elogio, reconhecimento, apoio verbal (“eu vejo seu esforço”).</li>
+          <li><b>Tempo de qualidade:</b> presença real, atenção, ritual juntos (sem celular).</li>
+          <li><b>Atos de serviço:</b> cuidado prático (facilitar sua vida, ajudar, resolver).</li>
+          <li><b>Presentes:</b> lembrança simbólica (intenção, não preço).</li>
+          <li><b>Toque físico:</b> carinho, abraço, proximidade (afeto corporal).</li>
+        </ul>
+
+        <h3>Por que isso “cola” tão bem?</h3>
+        <p>
+          Porque reduz um problema emocional (incerteza) para algo operável (tradução). Quando a pessoa entende
+          “qual gesto faz eu me sentir visto(a)”, ela sai do modo “adivinhação” e entra em modo “pedido claro”.
+        </p>
+
+        <h2>O erro nº1: “eu entrego do meu jeito, então você tem que sentir”</h2>
+        <p>
+          O cérebro costuma confundir <b>intenção</b> com <b>impacto</b>. Você pode estar amando muito — só no idioma errado.
+          A partir daí nasce a frase que destrói: “você nunca…”, “você sempre…”.
+          O problema é que acusações geram defesa; pedidos geram cooperação.
+        </p>
+
+        <h2 id="checklist">Checklist rápido (sem enrolação): qual é o seu idioma?</h2>
+        <p>Responda rápido, sem pensar demais:</p>
+        <ul>
+          <li>Quando você tá mal, o que te acalma mais: <b>palavras</b>, <b>presença</b>, <b>ajuda prática</b>, <b>um mimo</b> ou <b>carinho físico</b>?</li>
+          <li>O que mais te magoa: frieza verbal, falta de tempo, promessa não cumprida, esquecimento ou distância?</li>
+          <li>Quando você gosta, você oferece primeiro o quê?</li>
+        </ul>
+
+        <h2>Como usar isso sem virar cobrança (o jeito “adulto”)</h2>
+        <ul>
+          <li><b>Troque acusação por pedido:</b> “eu me sinto amado(a) quando…”.</li>
+          <li><b>Faça microtestes:</b> 1 gesto por dia por 3 dias (em vez de uma DR gigante).</li>
+          <li><b>Não rigidifique:</b> em semanas difíceis, o idioma muda (cansaço, estresse, rotina).</li>
+          <li><b>Combine um “sinal simples”:</b> “quando eu falar X, eu tô pedindo Y”.</li>
+        </ul>
+
+        <hr />
+
+        <h2>O que o Misticário faz com isso (e por quê ajuda)</h2>
+        <p>
+          O app transforma esse framework em algo <b>rápido</b> e <b>compartilhável</b>:
+          você responde poucas perguntas, recebe um resumo claro (idioma dominante + secundário) e um card pronto.
+          É um <b>ritual leve</b> (estético) com uma função prática: reduzir ruído e facilitar conversa.
+        </p>
+
+        <div class="btnrow">
+          <a class="btn cta" href="/go?feature=love_language">Fazer o teste no Misticário (1 min) →</a>
+          <a class="btn2 cta" href="/go?feature=love_language&mode=couple">Modo casal / grupo →</a>
+        </div>
+
+        <div class="note">
+          Nota ética: não é previsão, nem diagnóstico. Use como ferramenta de conversa: <b>intenção ≠ impacto</b>.
+        </div>
+
+        <div class="footer">
+          Referência cultural (framework popularizado): “The 5 Love Languages” (Gary Chapman). Aqui usamos como
+          linguagem prática para reduzir ruídos — não como regra científica definitiva.
+        </div>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="card">
+        <h3>O que você ganha em 1 minuto</h3>
+        <p>Pra quem quer clareza sem “terapia chata” e sem leitura de mente.</p>
+
+        <div class="kpis">
+          <div class="kpi">
+            <b>Resultado claro</b>
+            <span>idioma dominante + secundário</span>
+          </div>
+          <div class="kpi">
+            <b>Dicas práticas</b>
+            <span>como pedir sem cobrar</span>
+          </div>
+          <div class="kpi">
+            <b>Card pronto</b>
+            <span>pra story / compartilhar</span>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3>Mini-cópia (pra CTA)</h3>
+        <ul>
+          <li><b>Você não pede demais.</b> Você pede na língua errada.</li>
+          <li>Menos ruído, mais conexão.</li>
+          <li>Traduza intenção em gesto.</li>
+        </ul>
+
+        <div class="btnrow" style="margin-top:12px">
+          <a class="btn cta" href="/go?feature=love_language">Fazer o teste →</a>
+          <a class="btn2" href="#checklist">Voltar pro checklist</a>
+        </div>
+
+        <div class="note">
+          Dica de anúncio: esta página funciona como “pré-lander” para Search.
+          O CTA manda pro app (e mantém UTMs).
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Sticky CTA -->
+  <div class="sticky">
+    <a class="btn cta" href="/go?feature=love_language">Fazer o teste (1 min) →</a>
+  </div>
+
+  <!-- UTM passthrough: preserva parâmetros do anúncio nos CTAs -->
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (!params.toString()) return;
+
+      // Ajuste aqui se quiser forçar um "source" default
+      if (!params.get('utm_source')) params.set('utm_source', 'prelander');
+      if (!params.get('utm_medium')) params.set('utm_medium', 'article');
+
+      document.querySelectorAll('a.cta').forEach(a => {
+        try{
+          const url = new URL(a.getAttribute('href'), window.location.origin);
+          params.forEach((v,k) => url.searchParams.set(k, v));
+          a.setAttribute('href', url.pathname + '?' + url.searchParams.toString());
+        } catch(e){}
+      });
+    })();
+  </script>
+
+  <!-- FAQ JSON-LD (opcional, ajuda SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que são as 5 linguagens do amor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É um framework popular que descreve formas comuns de dar e receber carinho: palavras de afirmação, tempo de qualidade, atos de serviço, presentes e toque físico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Isso é terapia ou diagnóstico?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Este conteúdo é informativo e de entretenimento com autoconhecimento; não substitui terapia, diagnóstico ou aconselhamento profissional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como descobrir minha linguagem do amor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Observe o que te acalma, o que te magoa e quais gestos fazem você se sentir visto(a). Um teste rápido pode acelerar essa clareza."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
