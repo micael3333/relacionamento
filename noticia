@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quando o amor existe, mas não “chega”: o que as 5 Linguagens do Amor explicam</title>
+  <meta name="description" content="Matéria especial: por que casais brigam por ruído (não por falta de amor), como as 5 linguagens do amor reduzem a incerteza e um teste rápido para descobrir seu idioma afetivo." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Quando o amor existe, mas não “chega”: o que as 5 Linguagens do Amor explicam" />
+  <meta property="og:description" content="Uma matéria com história + explicação + checklist. No fim, um teste rápido no app." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <style>
+    :root{
+      /* Paleta “portal” (troque aqui) */
+      --brand:#8b0b0b;      /* barra principal */
+      --brand2:#b81c1c;     /* hover/realce */
+      --bg:#f6f7f9;
+      --paper:#ffffff;
+      --text:#1b1f2a;
+      --muted:#5f6676;
+      --line:#e7e9ef;
+      --chip:#f0f2f6;
+      --ok:#146c43;
+      --warn:#8a4b0f;
+      --shadow: 0 10px 30px rgba(16, 24, 40, .08);
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{ color: inherit; text-decoration: none; }
+    .topbar{
+      background: var(--brand);
+      color:#fff;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 6px 16px rgba(0,0,0,.18);
+    }
+    .topbar-inner{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:.2px;
+    }
+    .logo .mark{
+      width:34px; height:34px;
+      border-radius:8px;
+      display:inline-flex; align-items:center; justify-content:center;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 16px;
+    }
+    .navlinks{
+      display:flex; align-items:center; gap:10px;
+      font-size:13px;
+      opacity:.95;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .navlinks .chip{
+      background: rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.18);
+      padding:6px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .searchfake{
+      display:flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      opacity:.9;
+    }
+
+    .wrap{ max-width: 1100px; margin: 0 auto; padding: 18px 16px 110px; }
+    .crumbs{
+      display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+      font-size:12px; color: var(--muted);
+      margin: 10px 0 12px;
+    }
+    .crumbs a{ color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+    .section{
+      display:inline-flex; align-items:center; gap:8px;
+      background: var(--chip);
+      border:1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #2b3140;
+      width: fit-content;
+    }
+    .hero{
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    h1{
+      margin: 10px 0 10px;
+      font-size: clamp(26px, 3vw, 40px);
+      line-height: 1.1;
+      letter-spacing: -.3px;
+    }
+    .sub{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 80ch;
+    }
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .meta b{ color: #2b3140; }
+    .divider{ color: #c2c7d4; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 16px;
+      align-items:start;
+      margin-top: 16px;
+    }
+    @media(max-width: 960px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .article, .side{
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .article p, .article li{
+      color: #2b3140;
+      font-size: 15.5px;
+      line-height: 1.75;
+    }
+    .article h2{ margin: 18px 0 8px; font-size: 20px; }
+    .article h3{ margin: 14px 0 8px; font-size: 16px; }
+    .article ul{ margin: 8px 0 8px 18px; }
+
+    figure{ margin: 14px 0; }
+    figure img{
+      width:100%;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      display:block;
+      background: #eef1f6;
+    }
+    figcaption{
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .share{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px;
+    }
+    .share a{
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #2b3140;
+    }
+    .share a:hover{ border-color: #d6d9e4; }
+
+    .callout{
+      border-left: 4px solid var(--brand2);
+      background: #fff6f6;
+      border: 1px solid #f1d9d9;
+      padding: 12px 12px 12px 14px;
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+    .callout b{ color: #7a0c0c; }
+    .note{
+      font-size: 12.5px;
+      color: var(--muted);
+      background: #f7f8fb;
+      border: 1px dashed #dfe3ef;
+      padding: 10px 12px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+    details{
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+      margin-top: 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 800;
+      color: #2b3140;
+    }
+
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top: 10px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,.08);
+      background: var(--brand);
+      color: #fff;
+      font-weight: 900;
+    }
+    .btn:hover{ background: var(--brand2); }
+    .btn2{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #2b3140;
+      font-weight: 800;
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      margin-top: 14px;
+      background: #fff;
+    }
+    .box h4{ margin: 0 0 8px; font-size: 14px; }
+    .tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 8px; }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--chip);
+      color: #2b3140;
+    }
+
+    .chart{
+      margin-top: 10px;
+      display:grid;
+      gap: 10px;
+    }
+    .barrow{ display:grid; grid-template-columns: 1fr 90px; gap:10px; align-items:center; }
+    .barlabel{ font-size: 13px; color: #2b3140; }
+    .bar{
+      height: 10px;
+      background: #eef1f6;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      overflow:hidden;
+    }
+    .bar > span{
+      display:block;
+      height:100%;
+      background: var(--brand);
+      border-radius: 999px;
+    }
+    .pct{ font-size: 12px; color: var(--muted); text-align:right; }
+
+    .sticky{
+      position: fixed;
+      left:0; right:0; bottom:0;
+      background: rgba(255,255,255,.92);
+      border-top: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+      padding: 10px 12px;
+      display:flex;
+      justify-content:center;
+      z-index: 60;
+    }
+    .sticky .btn{ width:min(560px, 100%); }
+
+    .footer{
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Topbar "portal-like" -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="logo">
+        <span class="mark">📰</span>
+        <span>Portal Relacionamentos</span>
+        <span class="navlinks">
+          <span class="chip">ESPECIAL</span>
+        </span>
+      </div>
+
+      <div class="navlinks">
+        <span class="chip">Saúde emocional</span>
+        <span class="chip">Casais</span>
+        <span class="chip">Bem-estar</span>
+        <span class="searchfake">🔎 Buscar</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="crumbs">
+      <a href="#">Início</a> <span class="divider">›</span>
+      <a href="#">Saúde emocional</a> <span class="divider">›</span>
+      <span>Relacionamentos</span>
+    </div>
+
+    <div class="hero">
+      <div class="section">RELACIONAMENTOS • ESPECIAL</div>
+      <h1>Quando o amor existe, mas não “chega”: o que as 5 Linguagens do Amor explicam</h1>
+      <p class="sub">
+        Uma história comum (e silenciosa): a pessoa diz “eu te amo”, mas você continua com a sensação de estar sozinha(o) dentro da relação.
+        Nem sempre é falta de amor — muitas vezes é <b>ruído</b>. Entenda como as linguagens do amor reduzem a incerteza, devolvem esperança
+        e ajudam a transformar intenção em gesto.
+      </p>
+
+      <div class="meta">
+        <span><b>Por Redação</b> (conteúdo especial)</span>
+        <span class="divider">•</span>
+        <span>Atualizado hoje</span>
+        <span class="divider">•</span>
+        <span>Leitura: 5 min</span>
+      </div>
+
+      <div class="share">
+        <a href="#" aria-label="Compartilhar no WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="Compartilhar no Facebook">Facebook</a>
+        <a href="#" aria-label="Copiar link">Copiar link</a>
+      </div>
+
+      <details>
+        <summary>Ver resumo</summary>
+        <ul>
+          <li>O conflito mais comum não é “falta de amor”, é <b>tradução errada</b>.</li>
+          <li>As 5 linguagens organizam sinais e reduzem o modo “leitura de mente”.</li>
+          <li>Quando você pede no idioma errado, vira cobrança sem querer.</li>
+          <li>No fim, um teste rápido ajuda a descobrir seu padrão afetivo.</li>
+        </ul>
+      </details>
+
+      <div class="note">
+        Transparência: história e personagens abaixo são <b>ficcionais</b> (inspirados em padrões reais). Conteúdo informativo/entretenimento;
+        não substitui terapia ou aconselhamento profissional.
+      </div>
+    </div>
+
+    <section class="grid">
+      <!-- ARTICLE -->
+      <article class="article">
+        <figure>
+          <!-- Troque o src por uma imagem sua (ou do banco que você usa) -->
+          <img src="hero-love-language.jpg" alt="Silhueta de casal ao pôr do sol" />
+          <figcaption>Imagem ilustrativa — relacionamentos costumam falhar mais por “ruído” do que por falta de sentimento.</figcaption>
+        </figure>
+
+        <h2>A história: “Ele faz tudo… mas eu não me sinto amada”</h2>
+        <p>
+          “A gente não briga por traição, nem por falta de respeito. Ele é um cara bom”, diz <b>Lívia</b>, 31. Ainda assim, ela descreve um incômodo
+          que parece pequeno — mas vai crescendo: <i>“Eu sinto que o amor dele não chega em mim.”</i>
+        </p>
+        <p>
+          Do lado dele, o sentimento era outro: <i>“Eu resolvo tudo. Como ela ainda acha que eu não ligo?”</i> A diferença é sutil:
+          ele demonstra carinho com <b>atos</b> (resolver, cuidar do prático). Ela “registra” amor com <b>palavras</b> e presença emocional.
+          Resultado: um dá, o outro não sente. E o cérebro interpreta isso como risco.
+        </p>
+
+        <div class="callout">
+          <b>Tradução rápida:</b> quando o cérebro está inseguro, ele busca sinais. Se não encontra no formato “certo”, ativa ansiedade.
+          A pessoa não quer “drama” — ela quer <b>clareza, proteção e esperança</b>.
+        </div>
+
+        <h2>O que são as 5 Linguagens do Amor (em português claro)</h2>
+        <p>
+          Pense como “formas de carinho que o seu cérebro reconhece como amor”. Não é regra rígida; é um mapa para reduzir ruído.
+        </p>
+        <ul>
+          <li><b>Palavras de afirmação:</b> elogio, reconhecimento, apoio verbal (“eu vejo você”).</li>
+          <li><b>Tempo de qualidade:</b> presença real, atenção sem celular, ritual a dois.</li>
+          <li><b>Atos de serviço:</b> cuidado prático (ajudar, resolver, facilitar).</li>
+          <li><b>Presentes:</b> lembrança simbólica (intenção e significado, não preço).</li>
+          <li><b>Toque físico:</b> abraço, carinho, proximidade corporal.</li>
+        </ul>
+
+        <h2>Por que isso dá sensação de “salvação” (sem promessa enganosa)</h2>
+        <p>
+          Porque tira o relacionamento do modo “adivinhação” e coloca no modo “ação”. A pessoa deixa de interpretar tudo como rejeição e passa a ter
+          um jeito simples de pedir: <b>“quando você faz X, eu sinto Y.”</b> Isso cria alívio e devolve agência.
+        </p>
+
+        <h3>O erro nº 1: “eu demonstro do meu jeito, então você tem que sentir”</h3>
+        <p>
+          O cérebro confunde <b>intenção</b> com <b>impacto</b>. Você pode amar muito — mas no idioma errado. Aí surgem as frases que inflamam:
+          “você nunca…” / “você sempre…”. Acusação vira defesa; pedido vira cooperação.
+        </p>
+
+        <!-- CTA discreto (meio do texto) -->
+        <div class="box">
+          <h4>Quer descobrir seu idioma afetivo em 1 minuto?</h4>
+          <p style="margin:0;color:var(--muted);font-size:13px">
+            Um teste rápido ajuda a nomear seu padrão (dominante + secundário) e dá sugestões práticas de como pedir sem virar cobrança.
+          </p>
+          <div class="btnrow">
+            <a class="btn cta" href="/go?feature=love_language">Fazer o teste no app →</a>
+            <a class="btn2 cta" href="/linguagem-do-amor/teste">Ver a página do teste →</a>
+          </div>
+        </div>
+
+        <h2>Dados (ilustrativos): o que mais impacta a satisfação no relacionamento</h2>
+        <p>
+          Portais costumam usar gráficos para dar clareza visual. Abaixo é um <b>modelo</b> (números ilustrativos) para você trocar por dados reais
+          quando tiver fonte (pesquisa/relatório/enquete).
+        </p>
+
+        <div class="chart" aria-label="Gráfico de barras">
+          <div class="barrow">
+            <div>
+              <div class="barlabel">Comunicação clara (pedido sem cobrança)</div>
+              <div class="bar"><span style="width:72%"></span></div>
+            </div>
+            <div class="pct">72%</div>
+          </div>
+
+          <div class="barrow">
+            <div>
+              <div class="barlabel">Demonstrações de carinho (idioma certo)</div>
+              <div class="bar"><span style="width:64%"></span></div>
+            </div>
+            <div class="pct">64%</div>
+          </div>
+
+          <div class="barrow">
+            <div>
+              <div class="barlabel">Confiança e consistência</div>
+              <div class="bar"><span style="width:58%"></span></div>
+            </div>
+            <div class="pct">58%</div>
+          </div>
+
+          <div class="barrow">
+            <div>
+              <div class="barlabel">Tempo de qualidade (presença real)</div>
+              <div class="bar"><span style="width:51%"></span></div>
+            </div>
+            <div class="pct">51%</div>
+          </div>
+        </div>
+
+        <div class="note">
+          Importante: substitua por fonte real (pesquisa/relatório) se for publicar como “dados”.
+          Se for só pré-lander, mantenha como “ilustrativo” para não prometer autoridade falsa.
+        </div>
+
+        <h2>Checklist: como usar sem virar “cobrança disfarçada”</h2>
+        <ul>
+          <li><b>Troque acusação por pedido:</b> “eu me sinto amado(a) quando…”</li>
+          <li><b>Faça microtestes:</b> 1 gesto por dia por 3 dias (evita DR gigante).</li>
+          <li><b>Combine um sinal simples:</b> “quando eu falar X, eu tô pedindo Y”.</li>
+          <li><b>Tenha um limite:</b> idioma não conserta desrespeito (isso é outro assunto).</li>
+        </ul>
+
+        <h2>Onde o app entra (a ponte perfeita)</h2>
+        <p>
+          Se a dor é “eu não sei pedir sem parecer carente” ou “eu faço tudo e nunca basta”, o teste entra como <b>redução de incerteza</b>:
+          ele dá nome ao padrão e entrega uma forma prática de conversar. É um atalho: menos ruído, mais clareza.
+        </p>
+
+        <div class="btnrow">
+          <a class="btn cta" href="/go?feature=love_language">Fazer o teste (1 min) →</a>
+          <a class="btn2 cta" href="/go?feature=love_language&mode=couple">Modo casal/grupo →</a>
+        </div>
+
+        <div class="footer">
+          Nota editorial: este conteúdo é “especial informativo” (pré-lander). Evita promessas absolutas e não substitui apoio profissional.
+        </div>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <h3 style="margin:0 0 8px">Por que isso converte</h3>
+        <p style="margin:0;color:var(--muted);font-size:13px">
+          Dor + esperança + proteção. A pessoa não compra “teoria”; compra <b>alívio</b> e um caminho claro.
+        </p>
+
+        <div class="box">
+          <h4>O que você sente (e não fala)</h4>
+          <div class="tags">
+            <span class="tag">“tô pedindo demais?”</span>
+            <span class="tag">“tô invisível”</span>
+            <span class="tag">“tenho medo de perder”</span>
+            <span class="tag">“não quero parecer trouxa”</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <h4>O que você quer sentir</h4>
+          <ul style="margin:8px 0 0 18px;color:#2b3140;font-size:14px;line-height:1.7">
+            <li><b>Clareza</b> (sem adivinhar)</li>
+            <li><b>Segurança</b> (sem paranoia)</li>
+            <li><b>Esperança</b> (sem promessa falsa)</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h4>CTA editorial (discreto)</h4>
+          <p style="margin:0;color:var(--muted);font-size:13px">
+            Faça o teste e receba seu “idioma afetivo” + dicas práticas de conversa.
+          </p>
+          <div class="btnrow">
+            <a class="btn cta" href="/go?feature=love_language">Fazer o teste →</a>
+            <a class="btn2" href="#top">Voltar ao topo</a>
+          </div>
+        </div>
+
+        <div class="note">
+          Dica: este layout “portal” aumenta confiança porque parece informação, não propaganda.
+          O CTA entra como “ferramenta prática”.
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Sticky CTA (opcional; remova se quiser “mais editorial” ainda) -->
+  <div class="sticky">
+    <a class="btn cta" href="/go?feature=love_language">Fazer o teste (1 min) →</a>
+  </div>
+
+  <!-- Preserva UTMs nos CTAs -->
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (!params.toString()) return;
+
+      // Defaults se quiser padronizar tracking
+      if (!params.get('utm_source')) params.set('utm_source', 'prelander');
+      if (!params.get('utm_medium')) params.set('utm_medium', 'article');
+      if (!params.get('utm_campaign')) params.set('utm_campaign', 'love_language');
+
+      document.querySelectorAll('a.cta').forEach(a => {
+        try{
+          const url = new URL(a.getAttribute('href'), window.location.origin);
+          params.forEach((v,k) => url.searchParams.set(k, v));
+          a.setAttribute('href', url.pathname + '?' + url.searchParams.toString());
+        } catch(e){}
+      });
+    })();
+  </script>
+</body>
+</html>
