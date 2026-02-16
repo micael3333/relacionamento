@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plano 7 Dias — Amar no Idioma Certo</title>
+  <meta name="description" content="Descubra sua Linguagem do Amor em 3 minutos e receba um plano de 7 dias com desafios de 10 min/dia + mensagens prontas para reduzir brigas e reacender a conexão." />
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --card:#11121a;
+      --text:#f4f4f6;
+      --muted:#b9bbca;
+      --line:rgba(255,255,255,.10);
+      --accent:#8b5cf6;
+      --accent2:#22c55e;
+      --danger:#ef4444;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif;
+      background: radial-gradient(1000px 600px at 80% -10%, rgba(139,92,246,.25), transparent 60%),
+                  radial-gradient(900px 500px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 18px 18px 72px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0 8px;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center; text-decoration:none;
+      font-weight:700;
+      letter-spacing:.2px;
+      opacity:.95;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(139,92,246,1), rgba(34,197,94,1));
+      box-shadow: 0 10px 25px rgba(139,92,246,.25);
+    }
+    .top-cta{display:flex; gap:10px; align-items:center;}
+    .btn{
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 11px 14px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight: 650;
+      display:inline-flex; align-items:center; gap:10px;
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.22);}
+    .btn:active{transform: translateY(1px);}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(139,92,246,1), rgba(99,102,241,1));
+      border-color: rgba(255,255,255,.0);
+      box-shadow: 0 18px 45px rgba(139,92,246,.28);
+    }
+    .btn.primary:hover{filter: brightness(1.03);}
+    .btn.green{
+      background: linear-gradient(135deg, rgba(34,197,94,1), rgba(16,185,129,1));
+      border-color: rgba(255,255,255,.0);
+      box-shadow: 0 18px 45px rgba(34,197,94,.20);
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .hero{
+      padding: 34px 0 14px;
+      display:grid;
+      grid-template-columns: 1.25fr .9fr;
+      gap: 22px;
+      align-items:start;
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(30px, 3.7vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -.5px;
+    }
+    .sub{
+      margin: 0 0 16px;
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin: 18px 0 10px;}
+    .micro{
+      font-size: 13px;
+      color: rgba(244,244,246,.75);
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .micro span{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .stack{display:flex; flex-direction:column; gap:12px;}
+    .card h3{margin:0 0 8px; font-size: 16px; letter-spacing:.2px;}
+    .list{margin:0; padding-left: 18px; color: rgba(244,244,246,.88);}
+    .list li{margin: 7px 0;}
+    .muted{color: var(--muted);}
+    .divider{height:1px; background: var(--line); margin: 14px 0;}
+    section{padding: 18px 0;}
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap: 14px;}
+    .grid3{display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;}
+    .kicker{
+      font-size: 14px;
+      color: rgba(244,244,246,.80);
+      font-weight: 700;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    h2{
+      margin:0 0 8px;
+      font-size: 22px;
+      letter-spacing: -.2px;
+    }
+    .small{font-size: 13.5px; color: var(--muted);}
+    .step{
+      display:flex; gap:12px; align-items:flex-start;
+      padding: 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .badge{
+      width: 28px; height: 28px; border-radius: 10px;
+      display:grid; place-items:center;
+      background: rgba(139,92,246,.18);
+      border: 1px solid rgba(139,92,246,.35);
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .price{
+      display:flex; align-items:baseline; justify-content:space-between; gap: 10px; flex-wrap:wrap;
+      margin-top: 8px;
+    }
+    .amount{
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -.5px;
+    }
+    .strike{opacity:.6; text-decoration: line-through;}
+    .guarantee{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 14px;
+      border-radius: 14px;
+      border:1px solid rgba(34,197,94,.25);
+      background: rgba(34,197,94,.08);
+    }
+    details{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    summary{cursor:pointer; font-weight: 750;}
+    details p{margin: 10px 0 0; color: var(--muted);}
+    footer{
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: rgba(244,244,246,.70);
+      font-size: 12.5px;
+      display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero{grid-template-columns: 1fr; gap: 14px;}
+      .grid3{grid-template-columns: 1fr;}
+      .grid2{grid-template-columns: 1fr;}
+      .top-cta{display:none;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Início">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Plano 7 Dias</span>
+      </a>
+
+      <div class="top-cta">
+        <a class="btn" href="#como-funciona">Como funciona</a>
+        <a class="btn primary" href="#teste">✅ Fazer o teste (3 min)</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <div class="hero">
+        <div>
+          <div class="pill">🔎 Para quem busca “linguagem do amor” • Resultado na hora</div>
+          <h1>Descubra sua <span style="color:rgba(167,139,250,1)">Linguagem do Amor</span> em 3 minutos <br/>e receba um <span style="color:rgba(34,197,94,1)">Plano de 7 dias</span> pra parar de amar no idioma errado.</h1>
+          <p class="sub">
+            Sem terapia. Sem texto longo. <b>10 min por dia</b> com desafios práticos e mensagens prontas pra reduzir ruído, evitar brigas bobas e reacender a conexão.
+          </p>
+
+          <div class="cta-row">
+            <!-- Troque o href para a URL real do seu quiz -->
+            <a class="btn primary" href="#teste">✅ Fazer o teste agora (3 min)</a>
+            <a class="btn" href="#oferta">Ver o plano 7 dias</a>
+          </div>
+
+          <div class="micro">
+            <span>⚡ Acesso imediato</span>
+            <span>🕒 10 min/dia</span>
+            <span>💬 Scripts prontos</span>
+            <span>🧠 Clareza + ação</span>
+          </div>
+        </div>
+
+        <!-- CARD: O QUE VOCÊ RECEBE -->
+        <aside class="card" aria-label="O que você recebe">
+          <h3>Você vai receber:</h3>
+          <ul class="list">
+            <li><b>Sua linguagem principal + secundária</b> (resultado imediato)</li>
+            <li><b>Plano 7 dias</b> (1 desafio de 10 min/dia)</li>
+            <li><b>30 mensagens prontas</b> + “o que não fazer” pra evitar briga</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <p class="muted small" style="margin:0 0 10px;">
+            Ideal se você sente que dá muito e não é reconhecida, ou se vocês se gostam mas vivem se desencontrando.
+          </p>
+
+          <a class="btn green" href="#teste" style="width:100%; justify-content:center;">Quero meu resultado + plano</a>
+        </aside>
+      </div>
+
+      <!-- PARA QUEM É / NÃO É -->
+      <section aria-label="Para quem é">
+        <div class="grid2">
+          <div class="card">
+            <div class="kicker">Isso é pra você se…</div>
+            <ul class="list">
+              <li>você sente que ama muito e ainda assim fica insegura</li>
+              <li>vocês se gostam, mas vivem em conflito por “coisa pequena”</li>
+              <li>você quer melhorar o clima com ações simples e consistentes</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="kicker">Não é pra você se…</div>
+            <ul class="list">
+              <li>você quer “fórmula mágica” ou promessa garantida</li>
+              <li>você não pretende aplicar nada (é 10 min por dia)</li>
+              <li>você busca diagnóstico clínico/terapêutico (é educativo/prático)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA (3 passos) -->
+      <section id="como-funciona" aria-label="Como funciona">
+        <div class="card">
+          <div class="kicker">Como funciona</div>
+          <div class="grid3">
+            <div class="step">
+              <div class="badge">1</div>
+              <div>
+                <b>Faça o teste (3 min)</b>
+                <div class="small">Responda perguntas rápidas e diretas.</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="badge">2</div>
+              <div>
+                <b>Veja seu resultado na hora</b>
+                <div class="small">Descubra sua linguagem principal + secundária.</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="badge">3</div>
+              <div>
+                <b>Desbloqueie o Plano 7 Dias</b>
+                <div class="small">Desafios práticos + scripts + “o que não fazer”.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFERTA / PREÇO -->
+      <section id="oferta" aria-label="Oferta">
+        <div class="card">
+          <div class="kicker">Oferta</div>
+          <h2>Plano 7 Dias — Amar no Idioma Certo</h2>
+          <p class="small" style="margin-top:6px;">
+            Um plano simples e aplicável: <b>1 desafio por dia (10 min)</b> + scripts prontos pra reduzir atrito e aumentar conexão.
+          </p>
+
+          <div class="grid2" style="margin-top:12px;">
+            <div>
+              <h3 style="margin:0 0 8px;">Inclui:</h3>
+              <ul class="list">
+                <li><b>7 desafios</b> (1 por dia, 10 min)</li>
+                <li><b>30 mensagens prontas</b> por linguagem</li>
+                <li><b>Guia “o que NÃO fazer”</b> (pra evitar briga)</li>
+                <li><b>Compatibilidade</b> (onde vocês chocam e como ajustar)</li>
+                <li><b>Card compartilhável</b> do seu resultado</li>
+              </ul>
+            </div>
+
+            <div class="card" style="box-shadow:none;">
+              <div class="price">
+                <div>
+                  <div class="small">Acesso imediato • pagamento único</div>
+                  <div class="amount">R$ 39,90</div>
+                  <div class="small"><span class="strike">R$ 59,90</span> • Oferta de lançamento</div>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <!-- Troque este href para o checkout real -->
+              <a class="btn primary" href="#teste" style="width:100%; justify-content:center;">
+                🔓 Desbloquear meu plano agora
+              </a>
+
+              <div style="height:10px"></div>
+
+              <div class="guarantee">
+                <div style="font-size:18px;">✅</div>
+                <div>
+                  <b>Garantia de 7 dias</b>
+                  <div class="small">Se não fizer sentido pra você, é só pedir reembolso.</div>
+                </div>
+              </div>
+
+              <p class="small" style="margin:10px 0 0;">
+                *Educativo e prático. Não substitui acompanhamento terapêutico.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTE (placeholder de CTA / link do quiz) -->
+      <section id="teste" aria-label="Teste">
+        <div class="card">
+          <div class="kicker">Começar agora</div>
+          <h2>Fazer o teste (3 min)</h2>
+          <p class="small">
+            Aqui você pode apontar para a rota do quiz (ex.: <code>/quiz</code>) ou para uma URL externa.
+            No MVP, deixa o fluxo simples: Landing → Quiz → Resultado (teaser) → Paywall.
+          </p>
+
+          <div class="cta-row">
+            <!-- Ajuste para sua rota real do quiz -->
+            <a class="btn green" href="/quiz">✅ Ir para o Quiz</a>
+            <a class="btn" href="#oferta">Ver o que vou receber</a>
+          </div>
+
+          <p class="small" style="margin:6px 0 0;">
+            Dica: se ainda não existe <code>/quiz</code>, troque o link acima para a sua URL real (Typeform, Tally, etc.) por enquanto.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ (curto) -->
+      <section aria-label="FAQ">
+        <div class="card">
+          <div class="kicker">Perguntas rápidas</div>
+
+          <div class="stack">
+            <details>
+              <summary>É só pra casal?</summary>
+              <p>Não. Serve pra quem está ficando, namorando ou casado — e também pra quem quer se entender antes do próximo relacionamento.</p>
+            </details>
+
+            <details>
+              <summary>Meu parceiro precisa fazer o teste?</summary>
+              <p>Não. Você já consegue aplicar o plano com o seu resultado. Se ele fizer, a compatibilidade fica ainda mais precisa.</p>
+            </details>
+
+            <details>
+              <summary>Quando eu recebo?</summary>
+              <p>Na hora: resultado imediato + acesso ao plano após pagamento.</p>
+            </details>
+          </div>
+
+          <div class="divider"></div>
+
+          <a class="btn primary" href="#teste" style="width:100%; justify-content:center;">✅ Fazer o teste agora</a>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Plano 7 Dias — Amar no Idioma Certo</div>
+        <div>
+          <a href="#" class="muted">Termos</a> •
+          <a href="#" class="muted">Privacidade</a> •
+          <a href="#" class="muted">Contato</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll para âncoras
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', id);
+    });
+  </script>
+</body>
+</html>
